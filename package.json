@@ -6,7 +6,8 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
-    "start": "python3 -m http.server 8080"
+    "start": "python3 -m http.server 8080",
+    "deploy": "npm run build && git add -A && (git diff --cached --quiet || git commit -m \"deploy: update game\") && git push"
   },
   "devDependencies": {
     "typescript": "^5.5.4"
