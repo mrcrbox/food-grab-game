@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#c9c4bd">
+  <title>看谁抢得多·听力拼手速</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app">
+
+    <!-- 顶部标题 -->
+    <header class="topbar">
+      <h1 class="title">看谁抢得多</h1>
+      <div class="round-badge hidden" id="roundBadge">准备开始</div>
+    </header>
+
+    <!-- 语音提示条（黑色胶囊 + 内部1秒进度条） -->
+    <section class="prompt-area">
+      <div class="prompt-bubble" id="speaker">
+        <span class="prompt-text" id="promptText">开拍后听到食物名称<br>1秒内快速点击抢食物</span>
+        <span class="timer-track"><span class="timer-fill" id="timerFill"></span></span>
+      </div>
+    </section>
+
+    <!-- 3x3 食物网格（纯食物图悬浮） -->
+    <main class="board">
+      <div class="grid" id="grid"></div>
+    </main>
+
+    <!-- 底部：我 VS 人机 -->
+    <footer class="scoreboard">
+      <div class="side side-left">
+        <div class="side-label">我</div>
+        <div class="side-row">
+          <img class="avatar-img" id="playerAvatar" src="img/player.png" alt="我" draggable="false">
+          <span class="score-num score-player" id="playerScore">0</span>
+        </div>
+      </div>
+
+      <div class="side side-right">
+        <div class="side-label">人机</div>
+        <div class="side-row">
+          <span class="score-num score-robot" id="robotScore">0</span>
+          <img class="avatar-img" id="robotAvatar" src="img/robot.png" alt="人机" draggable="false">
+        </div>
+      </div>
+    </footer>
+
+    <!-- 全屏遮罩：首页 / 倒计时 / 结算 -->
+    <div class="overlay hidden" id="overlay">
+      <div class="overlay-card" id="overlayCard"></div>
+    </div>
+
+  </div>
+  <script src="js/game.js"></script>
+</body>
+</html>

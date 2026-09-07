@@ -1,0 +1,14 @@
+{
+  "name": "listen-grab-game",
+  "version": "1.0.0",
+  "private": true,
+  "description": "听力拼手速·抢食物大作战 - 手机端 TS 小游戏",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "start": "python3 -m http.server 8080"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  }
+}
