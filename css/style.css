@@ -217,6 +217,13 @@ body {
     0 -2px 0 var(--ink), 0 2px 0 var(--ink);
 }
 
+/* “我”/“人机”标签在各自头像正上方水平居中（宽度与头像一致） */
+.side-left .side-label,
+.side-right .side-label {
+  width: clamp(72px, 19vw, 94px);
+  text-align: center;
+}
+
 .side-row {
   display: flex;
   align-items: center;
@@ -470,6 +477,9 @@ body {
 }
 .vs-side.vs-right .vs-name {
   box-sizing: content-box;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 0px;
 }
 .vs-num {
   font-size: clamp(32px, 9vw, 46px);
